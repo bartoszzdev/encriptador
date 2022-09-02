@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --bg-color: #E5E5E5;
+    --dark-blue: #0A3871;
+    --gray-text: #495057;
+}
+
+::placeholder {
+    color: var(--dark-blue)
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none
+}
+
+button {
+    width: 100%;
+    max-width: 328px;
+    padding: 24px 0;
+    font-size: 1rem;
+    border-radius: 24px;
+    cursor: pointer;
+    border: none;
+}
+
+span {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--gray-text)
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    background-color: var(--bg-color)
+}
+
+/* TEXT INPUT FIELD */
+
+.text-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 80px 32px;
+    margin: 0 auto;
+}
+
+.text-input {
+    flex: 1;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--dark-blue);
+    background-color: transparent;
+}
+
+.buttons-box  {
+    display: flex;
+    gap: 20px;
+}
+
+.criptografar-btn {
+    background-color: var(--dark-blue);
+    color: #FFF
+}
+
+.descriptografar-btn {
+    background-color: #D8DFE8;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+
+/* RESULT BOX */
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+}
+
+.text-result {
+    background-image: url("../assets/boySearching.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
+.result-warning h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.result-warning p {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.copy-btn {
+    justify-self: flex-end;
+    display: none;
+    background-color: #FFF;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 950px) {
+    .text-box {
+        padding: 80px 50px 32px;
+    }
+}
+
+@media screen and (max-width: 864px) {
+    button {
+        width: 100%;
+        max-width: none;
+    }
+
+    .container {
+        flex-direction: column
+    }
+
+    /* TEXT INPUT FIELD */
+
+    .text-box {
+        width: 100%;
+        padding: 64px 0;
+    }
+
+   /* RESULT BOX */
+
+    .result-box {
+        width: 100%;
+        max-width: none;
+    }
+
+    .text-result {
+        background-image: none;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .container {
+        padding: 24px 16px;
+    }
+
+    /* TEXT INPUT FIELD */
+
+    .text-box {
+        padding: 80px 0;    
+    }
+
+    .buttons-box  {
+        flex-direction: column;
+    }
+
+    /* RESULT BOX */
+
+    .result-warning p {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
